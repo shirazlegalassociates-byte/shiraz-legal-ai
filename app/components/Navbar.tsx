@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+
 import Link from "next/link";
 
 export default function Navbar() {
@@ -19,37 +19,39 @@ export default function Navbar() {
 
         <nav className="hidden md:flex gap-8">
 
-         <Link href="/" className="hover:text-blue-700">
-  Home
-</Link>
+          <Link href="/" className="hover:text-blue-700">
+            Home
+          </Link>
 
-<Link href="/about" className="hover:text-blue-700">
-  About Us
-</Link>
-<Link href="/team" className="hover:text-blue-700">
-  Our Team
-</Link>
-<Link href="/practice-areas" className="hover:text-blue-700">
-  Practice Areas
+          <Link href="/about" className="hover:text-blue-700">
+            About Us
+          </Link>
 
-</Link>
+          <Link href="/team" className="hover:text-blue-700">
+            Our Team
+          </Link>
 
-<Link href="/#ai" className="hover:text-blue-700">
-  AI Assistant
-</Link>
+          <Link href="/practice-areas" className="hover:text-blue-700">
+            Practice Areas
+          </Link>
 
-<Link href="/contact" className="hover:text-blue-700">
-  Contact
-</Link>
+          <Link href="/#ai" className="hover:text-blue-700">
+            AI Assistant
+          </Link>
+
+          <Link href="/contact" className="hover:text-blue-700">
+            Contact
+          </Link>
 
         </nav>
 
         <Link
-  href="/appointment"
-  className="bg-blue-800 text-white px-5 py-2 rounded-lg hover:bg-blue-900 transition"
->
-  Book Appointment
-</Link>
+          href="/appointment"
+          className="bg-blue-900 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition"
+        >
+          Book Appointment
+        </Link>
+
       </div>
     </header>
   );

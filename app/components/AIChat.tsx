@@ -77,15 +77,18 @@ export default function AIChat() {
           {reply && (
             <div className="mt-8 bg-blue-50 border-l-4 border-blue-900 p-6 rounded-xl">
 
-              <h3 className="font-bold text-blue-900 mb-3">
-                AI Response
-                <button
-  onClick={() => navigator.clipboard.writeText(reply)}
-  className="mb-4 text-sm text-blue-700 hover:underline"
->
-  📋 Copy Response
-</button>
-              </h3>
+             <div className="flex justify-between items-center mb-3">
+  <h3 className="font-bold text-blue-900">
+    AI Response
+  </h3>
+
+  <button
+    onClick={() => navigator.clipboard.writeText(reply)}
+    className="text-sm text-blue-700 hover:underline"
+  >
+    📋 Copy Response
+  </button>
+</div>
 
               <p className="whitespace-pre-wrap text-gray-700 leading-8">
                 {reply}
