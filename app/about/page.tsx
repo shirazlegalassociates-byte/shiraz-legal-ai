@@ -1,6 +1,6 @@
 import WhatsAppButton from "../components/WhatsAppButton";
 import Link from "next/link";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/layout/Navbar";
 import Footer from "../components/Footer";
 
 export default function AboutPage() {

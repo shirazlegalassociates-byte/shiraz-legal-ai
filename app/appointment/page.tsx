@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/layout/Navbar";
 import Footer from "../components/Footer";
 
 export default function AppointmentPage() {

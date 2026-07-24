@@ -1,5 +1,5 @@
 import WhatsAppButton from "../components/WhatsAppButton";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/layout/Navbar";
 import Footer from "../components/Footer";
 
 const practiceAreas = [
