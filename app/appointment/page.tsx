@@ -73,15 +73,15 @@ export default function AppointmentPage() {
     <>
       <Navbar />
 
-      <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white pt-32 pb-20">
+      <section className="bg-[#0B1F3A] text-white pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h1 className="text-5xl font-bold">
             Book an Appointment
           </h1>
 
-          <p className="mt-6 text-xl text-gray-200">
-            Schedule a consultation with our legal experts.
-          </p>
+         <p className="mt-6 text-xl text-gray-300 max-w-3xl mx-auto">
+  Book a confidential consultation with our experienced legal team. We are committed to providing trusted legal advice and professional representation.
+</p>
         </div>
       </section>
 
@@ -93,71 +93,82 @@ export default function AppointmentPage() {
           </h2>
 
 <form onSubmit={handleSubmit} className="space-y-6">
-                      <input
-              type="text"
-              name="name"
-              placeholder="Full Name"
-              value={formData.name}
-              onChange={handleChange}
-              className="w-full border rounded-xl p-4"
-              required
-            />
+                      <div className="grid md:grid-cols-2 gap-6">
 
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Phone Number"
-              value={formData.phone}
-              onChange={handleChange}
-              className="w-full border rounded-xl p-4"
-              required
-            />
+  <input
+    type="text"
+    name="name"
+    placeholder="Full Name"
+    value={formData.name}
+    onChange={handleChange}
+    className="w-full border rounded-xl p-4"
+    required
+  />
 
-            <input
-              type="email"
-              name="email"
-              placeholder="Email Address"
-              value={formData.email}
-              onChange={handleChange}
-              className="w-full border rounded-xl p-4"
-              required
-            />
+  <input
+    type="tel"
+    name="phone"
+    placeholder="Phone Number"
+    value={formData.phone}
+    onChange={handleChange}
+    className="w-full border rounded-xl p-4"
+    required
+  />
 
-            <select
-              name="practice"
-              value={formData.practice}
-              onChange={handleChange}
-              className="w-full border rounded-xl p-4"
-              required
-            >
-              <option value="">Select Practice Area</option>
-              <option value="Family Law">Family Law</option>
-              <option value="Criminal Law">Criminal Law</option>
-              <option value="Civil Law">Civil Law</option>
-              <option value="Corporate Law">Corporate Law</option>
-              <option value="Property Law">Property Law</option>
-              <option value="Immigration Law">Immigration Law</option>
-              <option value="Human Rights">Human Rights</option>
-              <option value="Tax Law">Tax Law</option>
-            </select>
+</div>
 
-            <input
-              type="date"
-              name="date"
-              value={formData.date}
-              onChange={handleChange}
-              className="w-full border rounded-xl p-4"
-              required
-            />
+<div className="grid md:grid-cols-2 gap-6 mt-6">
 
-            <input
-              type="time"
-              name="time"
-              value={formData.time}
-              onChange={handleChange}
-              className="w-full border rounded-xl p-4"
-              required
-            />
+  <input
+    type="email"
+    name="email"
+    placeholder="Email Address"
+    value={formData.email}
+    onChange={handleChange}
+    className="w-full border rounded-xl p-4"
+    required
+  />
+
+  <select
+    name="practice"
+    value={formData.practice}
+    onChange={handleChange}
+    className="w-full border rounded-xl p-4"
+    required
+  >
+    <option value="">Select Practice Area</option>
+    <option value="Family Law">Family Law</option>
+    <option value="Criminal Law">Criminal Law</option>
+    <option value="Civil Law">Civil Law</option>
+    <option value="Corporate Law">Corporate Law</option>
+    <option value="Property Law">Property Law</option>
+    <option value="Immigration Law">Immigration Law</option>
+    <option value="Human Rights">Human Rights</option>
+    <option value="Tax Law">Tax Law</option>
+  </select>
+
+</div>
+           <div className="grid md:grid-cols-2 gap-6 mt-6">
+
+  <input
+    type="date"
+    name="date"
+    value={formData.date}
+    onChange={handleChange}
+    className="w-full border rounded-xl p-4"
+    required
+  />
+
+  <input
+    type="time"
+    name="time"
+    value={formData.time}
+    onChange={handleChange}
+    className="w-full border rounded-xl p-4"
+    required
+  />
+
+</div>
 
             <textarea
               rows={5}

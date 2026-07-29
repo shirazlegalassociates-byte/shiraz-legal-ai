@@ -8,13 +8,15 @@ export default function TeamPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white pt-32 pb-20">
+      <section className="bg-[#0B1F3A] text-white pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h1 className="text-5xl font-bold">Our Team</h1>
 
-          <p className="mt-6 text-xl text-gray-200">
-            Meet the dedicated legal professionals of Shiraz Legal Associates.
-          </p>
+         <p className="mt-6 text-xl text-gray-300 max-w-3xl mx-auto">
+  Meet the experienced legal professionals of Shiraz Legal Associates,
+  committed to delivering trusted legal services with integrity,
+  excellence and dedication.
+</p>
         </div>
       </section>
 
@@ -25,12 +27,12 @@ export default function TeamPage() {
           <div className="grid md:grid-cols-3 gap-8">
 
             {/* Shahbaz Malik */}
-            <div className="bg-white rounded-3xl shadow-lg p-8 text-center">
+            <div className="bg-white rounded-3xl shadow-lg p-8 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
 
-              <img
-  src="/images/shahbaz-malik.jpg"
+             <img
+  src="/images/shahbaz-malik.jpeg"
   alt="Advocate Shahbaz Malik"
-  className="w-40 h-40 rounded-full mx-auto object-cover border-4 border-blue-800"
+  className="w-40 h-40 rounded-full mx-auto object-cover object-top border-4 border-blue-800"
 />
 
               <h2 className="text-2xl font-bold mt-6">
@@ -61,11 +63,10 @@ export default function TeamPage() {
             <div className="bg-white rounded-3xl shadow-lg p-8 text-center">
 
               <img
-              
-                src="https://placehold.co/200x200"
-                alt="Umer Hayyat"
-                className="w-40 h-40 rounded-full mx-auto"
-              />
+  src="/images/umer-hayyat.jpeg"
+  alt="Umer Hayyat"
+ className="w-40 h-40 rounded-full mx-auto object-cover object-top border-4 border-blue-800"
+/>
 
               <h2 className="text-2xl font-bold mt-6">
                 Umer Hayyat
@@ -89,10 +90,10 @@ export default function TeamPage() {
             <div className="bg-white rounded-3xl shadow-lg p-8 text-center">
 
               <img
-                src="https://placehold.co/200x200"
-                alt="Jibran Pirzada"
-                className="w-40 h-40 rounded-full mx-auto"
-              />
+  src="/images/jibran-pirzada.jpeg"
+  alt="Jibran Pirzada"
+ className="w-40 h-40 rounded-full mx-auto object-cover object-top border-4 border-blue-800"
+/>
 
               <h2 className="text-2xl font-bold mt-6">
                 Jibran Pirzada

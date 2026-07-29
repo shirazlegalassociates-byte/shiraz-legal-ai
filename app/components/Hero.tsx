@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 text-white pt-32 pb-24">
+   <section className="bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 text-white pt-44 pb-24">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
         {/* Left Side */}
@@ -25,9 +25,6 @@ export default function Hero() {
           </p>
 
           <div className="flex gap-5 mt-10">
-
-           <div className="flex gap-5 mt-10">
-
   <Link
     href="/appointment"
     className="bg-yellow-400 text-black px-8 py-4 rounded-xl font-bold hover:bg-yellow-300 transition"
@@ -41,8 +38,6 @@ export default function Hero() {
   >
     Ask AI
   </a>
-
-</div>
 
           </div>
 
