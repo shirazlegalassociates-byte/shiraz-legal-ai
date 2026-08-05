@@ -68,11 +68,19 @@ Rules:
         data.choices?.[0]?.message?.content ||
         "Sorry, I couldn't generate a response.",
     });
-  } catch (error: any) {
-    console.error("Server Error:", error);
+  } catch (error: unknown) {
 
-    return Response.json({
-      reply: error.message || "Something went wrong.",
-    });
-  }
+  console.error(error);
+
+  const message =
+    error instanceof Error
+      ? error.message
+      : "Something went wrong.";
+
+  return Response.json({
+    reply: message,
+  });
+
+}
+
 }

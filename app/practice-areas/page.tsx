@@ -1,5 +1,8 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import Navbar from "../components/layout/Navbar";
+import Footer from "../components/Footer";
 
 const practiceAreas = [
   {
@@ -51,39 +54,71 @@ const practiceAreas = [
       "Fundamental rights, constitutional petitions and public interest litigation.",
   },
 ];
+export const metadata: Metadata = {
+  title: "Practice Areas",
 
+  description:
+    "Explore the legal services offered by Shiraz Legal Associates including Civil Law, Criminal Law, Family Law, Corporate Law, Property Law, Tax Law and Immigration Law.",
+
+  keywords: [
+    "Practice Areas",
+    "Civil Law Pakistan",
+    "Criminal Lawyer Pakistan",
+    "Family Lawyer Pakistan",
+    "Corporate Lawyer",
+    "Property Lawyer",
+    "Tax Lawyer",
+    "Immigration Lawyer",
+    "Legal Services Pakistan",
+  ],
+};
 export default function PracticeAreasPage() {
   return (
-    <main>
-      {/* Hero */}
-      <section className="bg-[#0B1F3A] text-white py-24">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h1 className="text-5xl font-bold">Practice Areas</h1>
+    <>
+      <Navbar />
 
-          <p className="mt-6 text-xl text-gray-300 max-w-3xl mx-auto">
-            Comprehensive legal services delivered by experienced advocates and
-            legal consultants.
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-[#0B1F3A] via-[#123C73] to-[#1D4E89] text-white pt-32 pb-20">
+
+        <div className="max-w-7xl mx-auto px-6 text-center">
+
+          <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight">
+            Practice Areas
+          </h1>
+
+          <p className="mt-6 text-xl text-blue-100 max-w-3xl mx-auto leading-8">
+            Comprehensive legal services delivered by experienced advocates,
+            legal consultants and AI-powered legal guidance across Pakistan.
           </p>
+
         </div>
+
       </section>
 
-      {/* Cards */}
+      {/* Practice Areas */}
+
       <section className="py-20 bg-gray-100">
+
         <div className="max-w-7xl mx-auto px-6">
+
           <h2 className="text-4xl font-bold text-center text-[#0B1F3A]">
             Our Legal Services
           </h2>
 
           <p className="text-center text-gray-600 mt-4 mb-14">
-            We provide professional legal services across Pakistan.
+            We provide comprehensive legal services with professionalism,
+            integrity and excellence.
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
             {practiceAreas.map((area) => (
+
               <div
                 key={area.title}
-                className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300"
+                className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all duration-300"
               >
+
                 <Image
                   src={area.image}
                   alt={area.title}
@@ -93,6 +128,7 @@ export default function PracticeAreasPage() {
                 />
 
                 <div className="p-6">
+
                   <h3 className="text-2xl font-bold text-[#0B1F3A]">
                     {area.title}
                   </h3>
@@ -101,186 +137,237 @@ export default function PracticeAreasPage() {
                     {area.description}
                   </p>
 
-                  <button className="mt-6 w-full bg-[#0B1F3A] text-white py-3 rounded-xl hover:bg-blue-800 transition">
+                  <button className="mt-6 w-full bg-[#0B1F3A] text-white py-3 rounded-xl font-semibold hover:bg-[#123C73] transition">
                     Learn More
                   </button>
+
                 </div>
+
               </div>
+
             ))}
+
           </div>
+
         </div>
+
       </section>
-{/* Why Choose Us */}
+            {/* Why Choose Us */}
 
-<section className="py-20 bg-white">
-  <div className="max-w-7xl mx-auto px-6">
+      <section className="py-20 bg-white">
 
-    <h2 className="text-4xl font-bold text-center text-[#0B1F3A]">
-      Why Choose Shiraz Legal Associates?
-    </h2>
+        <div className="max-w-7xl mx-auto px-6">
 
-    <p className="text-center text-gray-600 mt-4 mb-14">
-      We combine legal expertise with professionalism to provide trusted legal
-      solutions across Pakistan.
-    </p>
+          <h2 className="text-4xl font-bold text-center text-[#0B1F3A]">
+            Why Choose Shiraz Legal Associates?
+          </h2>
 
-    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <p className="text-center text-gray-600 mt-4 mb-14 max-w-3xl mx-auto">
+            We combine legal expertise, professional ethics and modern
+            technology to provide trusted legal solutions across Pakistan.
+          </p>
 
-      <div className="bg-gray-50 rounded-2xl p-8 shadow hover:shadow-xl transition text-center">
-        <div className="text-5xl mb-5">⚖️</div>
-        <h3 className="text-xl font-bold text-[#0B1F3A]">
-          Expert Lawyers
-        </h3>
-        <p className="text-gray-600 mt-3">
-          Experienced advocates providing practical legal solutions.
-        </p>
-      </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-      <div className="bg-gray-50 rounded-2xl p-8 shadow hover:shadow-xl transition text-center">
-        <div className="text-5xl mb-5">🤝</div>
-        <h3 className="text-xl font-bold text-[#0B1F3A]">
-          Client Focused
-        </h3>
-        <p className="text-gray-600 mt-3">
-          Every case receives personal attention and strategic planning.
-        </p>
-      </div>
+            <div className="bg-white border border-gray-100 rounded-2xl shadow-lg p-8 text-center hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
 
-      <div className="bg-gray-50 rounded-2xl p-8 shadow hover:shadow-xl transition text-center">
-        <div className="text-5xl mb-5">📑</div>
-        <h3 className="text-xl font-bold text-[#0B1F3A]">
-          Transparent Advice
-        </h3>
-        <p className="text-gray-600 mt-3">
-          Honest legal guidance with complete transparency.
-        </p>
-      </div>
+              <div className="text-5xl mb-5">⚖️</div>
 
-      <div className="bg-gray-50 rounded-2xl p-8 shadow hover:shadow-xl transition text-center">
-        <div className="text-5xl mb-5">🤖</div>
-        <h3 className="text-xl font-bold text-[#0B1F3A]">
-          AI Legal Assistant
-        </h3>
-        <p className="text-gray-600 mt-3">
-          Fast legal guidance powered by modern AI technology.
-        </p>
-      </div>
+              <h3 className="text-xl font-bold text-[#0B1F3A]">
+                Expert Lawyers
+              </h3>
 
-    </div>
+              <p className="mt-4 text-gray-600">
+                Experienced advocates providing practical legal solutions for
+                individuals and businesses.
+              </p>
 
-  </div>
-</section>
-{/* Our Legal Process */}
+            </div>
 
-<section className="py-20 bg-gray-100">
-  <div className="max-w-7xl mx-auto px-6">
+            <div className="bg-white border border-gray-100 rounded-2xl shadow-lg p-8 text-center hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
 
-    <h2 className="text-4xl font-bold text-center text-[#0B1F3A]">
-      Our Legal Process
-    </h2>
+              <div className="text-5xl mb-5">🤝</div>
 
-    <p className="text-center text-gray-600 mt-4 mb-14">
-      We follow a structured approach to deliver the best legal outcomes for our clients.
-    </p>
+              <h3 className="text-xl font-bold text-[#0B1F3A]">
+                Client Focused
+              </h3>
 
-    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <p className="mt-4 text-gray-600">
+                Every client receives personalized legal advice and dedicated
+                support from our legal team.
+              </p>
 
-      <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-2xl transition">
-        <div className="text-5xl mb-5">📞</div>
-        <h3 className="text-2xl font-bold text-[#0B1F3A]">
-          Consultation
-        </h3>
-        <p className="mt-4 text-gray-600">
-          We carefully understand your legal issue and discuss possible solutions.
-        </p>
-      </div>
+            </div>
 
-      <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-2xl transition">
-        <div className="text-5xl mb-5">📑</div>
-        <h3 className="text-2xl font-bold text-[#0B1F3A]">
-          Legal Strategy
-        </h3>
-        <p className="mt-4 text-gray-600">
-          Our legal experts prepare a customized strategy for your case.
-        </p>
-      </div>
+            <div className="bg-white border border-gray-100 rounded-2xl shadow-lg p-8 text-center hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
 
-      <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-2xl transition">
-        <div className="text-5xl mb-5">⚖️</div>
-        <h3 className="text-2xl font-bold text-[#0B1F3A]">
-          Representation
-        </h3>
-        <p className="mt-4 text-gray-600">
-          We represent your interests with professionalism and dedication.
-        </p>
-      </div>
+              <div className="text-5xl mb-5">📑</div>
 
-      <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-2xl transition">
-        <div className="text-5xl mb-5">🏆</div>
-        <h3 className="text-2xl font-bold text-[#0B1F3A]">
-          Resolution
-        </h3>
-        <p className="mt-4 text-gray-600">
-          We work towards achieving the best possible outcome for every client.
-        </p>
-      </div>
+              <h3 className="text-xl font-bold text-[#0B1F3A]">
+                Transparent Advice
+              </h3>
 
-    </div>
+              <p className="mt-4 text-gray-600">
+                Honest legal guidance with complete transparency throughout your
+                legal journey.
+              </p>
 
-  </div>
-</section>
-{/* Statistics */}
+            </div>
 
-<section className="py-20 bg-[#0B1F3A] text-white">
-  <div className="max-w-7xl mx-auto px-6">
+            <div className="bg-white border border-gray-100 rounded-2xl shadow-lg p-8 text-center hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
 
-    <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 text-center">
+              <div className="text-5xl mb-5">🤖</div>
 
-      <div>
-        <h2 className="text-5xl font-bold text-blue-400">500+</h2>
-        <p className="mt-4 text-gray-300 text-lg">
-          Cases Successfully Handled
-        </p>
-      </div>
+              <h3 className="text-xl font-bold text-[#0B1F3A]">
+                AI Legal Assistant
+              </h3>
 
-      <div>
-        <h2 className="text-5xl font-bold text-blue-400">9+</h2>
-        <p className="mt-4 text-gray-300 text-lg">
-          Years of Legal Experience
-        </p>
-      </div>
+              <p className="mt-4 text-gray-600">
+                Get instant legal guidance anytime using our modern AI-powered
+                legal assistant.
+              </p>
 
-      <div>
-        <h2 className="text-5xl font-bold text-blue-400">1000+</h2>
-        <p className="mt-4 text-gray-300 text-lg">
-          Satisfied Clients
-        </p>
-      </div>
+            </div>
 
-      <div>
-        <h2 className="text-5xl font-bold text-blue-400">24/7</h2>
-        <p className="mt-4 text-gray-300 text-lg">
-          Legal Consultation Support
-        </p>
-      </div>
+          </div>
 
-    </div>
+        </div>
 
-  </div>
-</section>
+      </section>
+
+      {/* Our Legal Process */}
+
+      <section className="py-20 bg-gray-100">
+
+        <div className="max-w-7xl mx-auto px-6">
+
+          <h2 className="text-4xl font-bold text-center text-[#0B1F3A]">
+            Our Legal Process
+          </h2>
+
+          <p className="text-center text-gray-600 mt-4 mb-14">
+            A professional step-by-step process designed to achieve the best
+            possible outcome for every client.
+          </p>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-lg p-8 text-center hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+
+              <div className="text-5xl mb-5">📞</div>
+
+              <h3 className="text-2xl font-bold text-[#0B1F3A]">
+                Consultation
+              </h3>
+
+              <p className="mt-4 text-gray-600">
+                We understand your legal issue and discuss possible legal
+                options.
+              </p>
+
+            </div>
+
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-lg p-8 text-center hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+
+              <div className="text-5xl mb-5">📑</div>
+
+              <h3 className="text-2xl font-bold text-[#0B1F3A]">
+                Strategy
+              </h3>
+
+              <p className="mt-4 text-gray-600">
+                Our legal experts prepare a customized legal strategy for your
+                matter.
+              </p>
+
+            </div>
+                        <div className="bg-white rounded-2xl border border-gray-100 shadow-lg p-8 text-center hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+
+              <div className="text-5xl mb-5">⚖️</div>
+
+              <h3 className="text-2xl font-bold text-[#0B1F3A]">
+                Representation
+              </h3>
+
+              <p className="mt-4 text-gray-600">
+                We represent your interests with professionalism, dedication
+                and strong legal advocacy.
+              </p>
+
+            </div>
+
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-lg p-8 text-center hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+
+              <div className="text-5xl mb-5">🏆</div>
+
+              <h3 className="text-2xl font-bold text-[#0B1F3A]">
+                Resolution
+              </h3>
+
+              <p className="mt-4 text-gray-600">
+                We work tirelessly to achieve the best possible outcome for
+                every client.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* Statistics */}
+
+      <section className="py-20 bg-white">
+
+        <div className="max-w-7xl mx-auto px-6">
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 text-center hover:-translate-y-2 transition-all duration-300">
+              <h2 className="text-5xl font-bold text-[#0B1F3A]">500+</h2>
+              <p className="mt-3 text-gray-600">Cases Successfully Handled</p>
+            </div>
+
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 text-center hover:-translate-y-2 transition-all duration-300">
+              <h2 className="text-5xl font-bold text-[#0B1F3A]">12+</h2>
+              <p className="mt-3 text-gray-600">Years Experience</p>
+            </div>
+
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 text-center hover:-translate-y-2 transition-all duration-300">
+              <h2 className="text-5xl font-bold text-[#0B1F3A]">1000+</h2>
+              <p className="mt-3 text-gray-600">Satisfied Clients</p>
+            </div>
+
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 text-center hover:-translate-y-2 transition-all duration-300">
+              <h2 className="text-5xl font-bold text-[#0B1F3A]">24/7</h2>
+              <p className="mt-3 text-gray-600">AI Legal Assistance</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
       {/* CTA */}
-      <section className="bg-[#0B1F3A] text-white py-20">
-        <div className="max-w-5xl mx-auto text-center px-6">
-          <h2 className="text-4xl font-bold">
+
+      <section className="bg-gradient-to-r from-[#0B1F3A] via-[#123C73] to-[#1D4E89] text-white py-20">
+
+        <div className="max-w-5xl mx-auto px-6 text-center">
+
+          <h2 className="text-5xl font-bold">
             Need Professional Legal Assistance?
           </h2>
 
-          <p className="mt-6 text-gray-300 text-lg">
+          <p className="mt-6 text-xl text-blue-100">
             Our experienced advocates are ready to provide trusted legal advice
             and representation tailored to your needs.
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row justify-center gap-6">
+
             <Link
               href="/appointment"
               className="bg-white text-[#0B1F3A] px-8 py-4 rounded-xl font-bold hover:bg-gray-200 transition"
@@ -294,9 +381,15 @@ export default function PracticeAreasPage() {
             >
               Contact Us
             </Link>
+
           </div>
+
         </div>
+
       </section>
-    </main>
+
+      <Footer />
+
+    </>
   );
 }

@@ -4,22 +4,22 @@ const lawyers = [
   {
     name: "Shahbaz Malik",
     title: "Advocate High Court",
-    experience: "9+ Years Experience",
-    specialization: "Civil Law • Criminal Law • Immigration Law",
+    
+    specialization: "Civil Law • Criminal Law • Corporate Law • Immigration Law",
    image: "/images/shahbaz-malik.jpeg",
   },
   {
     name: "Umer Hayyat",
     title:"Advocate High Court",
-    experience: "9+ Years Experience",
+
     specialization: "Family Law • Civil Law • Criminal Law",
    image: "/images/umer-hayyat.jpeg",
   },
   {
     name: "Jibran Pirzada",
-    title: "Advocate High Court",
-    experience: "9+ Years Experience",
-    specialization: "Civil Law • Business Law • Criminal Law",
+    title: "Barrister",
+  
+    specialization: "Civil Law • Business Law • Criminal Law • Family Law",
    image: "/images/jibran-pirzada.jpeg",
   },
 ];
@@ -66,7 +66,7 @@ export default function LegalTeam() {
                 </p>
 
                 <p className="text-sm text-gray-500 mt-3">
-                  {lawyer.experience}
+                  
                 </p>
 
                 <button className="mt-6 w-full bg-[#0B1F3A] text-white py-3 rounded-xl hover:bg-blue-800 transition">

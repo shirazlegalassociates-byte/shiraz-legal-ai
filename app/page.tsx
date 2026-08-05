@@ -1,4 +1,6 @@
 "use client";
+import Statistics from "./components/Statistics";
+console.log("HOME ENV =", process.env.GNEWS_API_KEY);
 import LegalTeam from "./components/LegalTeam";
 import LatestNews from "./components/LatestNews";
 import PracticeAreas from "./components/home/PracticeAreas";
@@ -13,7 +15,7 @@ export default function Home() {
   return (
     <>
      <Hero />
-
+<Statistics />
 <PracticeAreas />
 
 <LegalTeam />

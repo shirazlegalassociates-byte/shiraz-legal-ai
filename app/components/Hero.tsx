@@ -57,7 +57,7 @@ export default function Hero() {
 <div className="grid grid-cols-3 gap-4 mt-8">
 
   <div className="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
-    <h3 className="text-3xl font-bold text-yellow-400">6+</h3>
+    <h3 className="text-3xl font-bold text-yellow-400">12+</h3>
     <p className="text-sm text-gray-200">Years Experience</p>
   </div>
 

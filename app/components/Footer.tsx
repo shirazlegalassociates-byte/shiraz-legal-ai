@@ -1,124 +1,255 @@
+import Link from "next/link";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaYoutube,
+  FaXTwitter,
+} from "react-icons/fa6";
 export default function Footer() {
   return (
-    <footer className="bg-slate-950 text-white py-12">
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
+    <footer className="bg-[#0B1F3A] text-white">
 
-        {/* Company */}
-        <div>
-          <h2 className="text-2xl font-bold text-yellow-400">
-            Shiraz Legal Associates
-          </h2>
+      {/* Main Footer */}
 
-          <p className="mt-4 text-gray-300">
-            Professional legal services powered by Artificial Intelligence.
-            We provide general legal information related to Pakistani law.
-          </p>
-        </div>
+      <div className="max-w-7xl mx-auto px-6 py-16">
 
-        {/* Contact */}
-        <div>
-          <h3 className="text-xl font-semibold mb-4">
-            Contact
-          </h3>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
 
-          <p>📞 0315-5527144</p>
-          <p>📞 0300-9119583</p>
+          {/* Company */}
 
-          <p className="mt-3">
-            ✉️ shirazlegalassociates@gmail.com
-          </p>
+          <div>
 
-          <p className="mt-3">
-            📍 767/2B Opposite Shafique Plaza,
-            Mandian Abbottabad, Pakistan
-          </p>
-        </div>
+            <h2 className="text-3xl font-bold">
+              Shiraz Legal Associates
+            </h2>
 
-        {/* Services */}
-        <div>
-          <h3 className="text-xl font-semibold mb-4">
-            Practice Areas
-          </h3>
-
-          <ul className="space-y-2 text-gray-300">
-            <li>Family Law</li>
-            <li>Criminal Law</li>
-            <li>Property Law</li>
-            <li>Civil Law</li>
-            <li>Corporate Law</li>
-          </ul>
-        </div>
-
-        {/* Social Media */}
-        <div>
-          <h3 className="text-xl font-semibold mb-4">
-            Follow Us
-          </h3>
-
-          <div className="space-y-2">
-
-            <a
-              href="https://x.com/LegalShiraz?t=JRq5ulBt-cvmYMdqEe6Gpw&s=09"
-              target="_blank"
-              className="block hover:text-yellow-400"
-            >
-              Twitter (X)
-            </a>
-
-            <a
-              href="https://www.facebook.com/share/1GYJomBRkg/"
-              target="_blank"
-              className="block hover:text-yellow-400"
-            >
-              Facebook
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/shiraz-legal-associates-35a862381"
-              target="_blank"
-              className="block hover:text-yellow-400"
-            >
-              LinkedIn
-            </a>
-
-            <a
-              href="https://www.youtube.com/@ShirazLegalAssociates"
-              target="_blank"
-              className="block hover:text-yellow-400"
-            >
-              YouTube
-            </a>
-
-            <a
-              href="https://www.instagram.com/shirazlegalassociates"
-              target="_blank"
-              className="block hover:text-yellow-400"
-            >
-              Instagram
-            </a>
-
-            <a
-              href="https://whatsapp.com/channel/0029VbBjGPVCBtxK904wTK3k"
-              target="_blank"
-              className="block hover:text-yellow-400"
-            >
-              WhatsApp Channel
-            </a>
+            <p className="mt-6 text-blue-100 leading-8">
+              Professional legal services across Pakistan with integrity,
+              excellence and modern AI-powered legal assistance.
+            </p>
 
           </div>
+
+          {/* Quick Links */}
+
+          <div>
+
+            <h3 className="text-2xl font-semibold mb-6">
+              Quick Links
+            </h3>
+
+            <ul className="space-y-3">
+
+              <li>
+                <Link href="/" className="hover:text-blue-300 transition">
+                  Home
+                </Link>
+              </li>
+
+              <li>
+                <Link href="/about" className="hover:text-blue-300 transition">
+                  About
+                </Link>
+              </li>
+
+              <li>
+                <Link href="/practice-areas" className="hover:text-blue-300 transition">
+                  Practice Areas
+                </Link>
+              </li>
+
+              <li>
+                <Link href="/team" className="hover:text-blue-300 transition">
+                  Our Team
+                </Link>
+              </li>
+
+              <li>
+                <Link href="/news" className="hover:text-blue-300 transition">
+                  News
+                </Link>
+              </li>
+
+              <li>
+                <Link href="/appointment" className="hover:text-blue-300 transition">
+                  Appointment
+                </Link>
+              </li>
+
+              <li>
+                <Link href="/contact" className="hover:text-blue-300 transition">
+                  Contact
+                </Link>
+              </li>
+
+            </ul>
+
+          </div>
+                    {/* Practice Areas */}
+
+          <div>
+
+            <h3 className="text-2xl font-semibold mb-6">
+              Practice Areas
+            </h3>
+
+            <ul className="space-y-3">
+
+              <li>Civil Law</li>
+
+              <li>Criminal Law</li>
+
+              <li>Family Law</li>
+
+              <li>Corporate Law</li>
+
+              <li>Property Law</li>
+
+              <li>Tax Law</li>
+
+              <li>Immigration Law</li>
+
+            </ul>
+
+          </div>
+
+          {/* Contact */}
+
+          <div>
+
+            <h3 className="text-2xl font-semibold mb-6">
+              Contact Us
+            </h3>
+
+            <div className="space-y-5 text-blue-100">
+
+              <p>
+                📍 767/2B Opposite Shafique Plaza<br />
+                Mandian Abbottabad
+              </p>
+
+              <p>
+                📞 0315-5527144<br />
+                0300-9119583
+              </p>
+
+              <p>
+                ✉️ shirazlegalassociates@gmail.com
+              </p>
+
+            </div>
+
+           <div className="flex gap-4 mt-8">
+
+  <a
+    href="https://www.facebook.com/share/1GYJomBRkg/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-10 h-10 rounded-full bg-white/10 hover:bg-blue-600 flex items-center justify-center transition"
+  >
+    <FaFacebookF size={30} color="white" />
+  </a>
+
+  <a
+    href="https://www.linkedin.com/in/shiraz-legal-associates-35a862381"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-10 h-10 rounded-full bg-white/10 hover:bg-blue-700 flex items-center justify-center transition"
+  >
+    <FaLinkedinIn />
+  </a>
+
+  <a
+    href="https://www.instagram.com/shirazlegalassociates"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-10 h-10 rounded-full bg-white/10 hover:bg-pink-600 flex items-center justify-center transition"
+  >
+   <FaInstagram size={30} color="white" />
+  </a>
+
+  <a
+    href="https://www.youtube.com/@ShirazLegalAssociates"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-10 h-10 rounded-full bg-white/10 hover:bg-red-600 flex items-center justify-center transition"
+  >
+    <FaYoutube />
+  </a>
+
+  <a
+    href="https://x.com/LegalShiraz?t=JRq5ulBt-cvmYMdqEe6Gpw&s=09"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-10 h-10 rounded-full bg-white/10 hover:bg-gray-700 flex items-center justify-center transition"
+  >
+    <FaXTwitter />
+  </a>
+
+</div>
+
+          </div>
+
+        </div>
+
+      </div>
+            {/* Bottom Bar */}
+
+      <div className="border-t border-blue-800">
+
+        <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
+
+          <p className="text-blue-200 text-center md:text-left">
+            © 2026 Shiraz Legal Associates. All Rights Reserved.
+          </p>
+
+          <div className="flex gap-6">
+
+            <Link
+              href="/contact"
+              className="text-blue-200 hover:text-white transition"
+            >
+              Contact
+            </Link>
+
+            <Link
+              href="/appointment"
+              className="text-blue-200 hover:text-white transition"
+            >
+              Book Appointment
+            </Link>
+
+            <Link
+              href="/news"
+              className="text-blue-200 hover:text-white transition"
+            >
+              Latest News
+            </Link>
+<Link
+  href="/privacy-policy"
+  className="text-blue-200 hover:text-white transition"
+>
+  Privacy Policy
+</Link>
+<Link
+  href="/terms-conditions"
+  className="text-blue-200 hover:text-white transition"
+>
+  Terms & Conditions
+</Link>
+<Link
+  href="/ai-disclaimer"
+  className="text-blue-200 hover:text-white transition"
+>
+  AI Disclaimer
+</Link>
+          </div>
+
         </div>
 
       </div>
 
-      <div className="border-t border-gray-700 mt-10 pt-6 text-center text-gray-400">
-
-        © 2026 Shiraz Legal Associates. All Rights Reserved.
-
-        <br />
-
-        Powered by AI • Built with Next.js
-
-      </div>
     </footer>
   );
 }

@@ -1,27 +1,34 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
+interface Article {
+  title: string;
+  description: string;
+  image: string;
+  url: string;
+  publishedAt: string;
+  source: {
+    name: string;
+  };
+}
+
 export default function LatestNews() {
-  const news = [
-    {
-      category: "FBR",
-      date: "25 July 2026",
-      title: "FBR Extends Tax Return Filing Deadline",
-      description:
-        "The Federal Board of Revenue has extended the tax return filing deadline for individuals and businesses.",
-    },
-    {
-      category: "Supreme Court",
-      date: "24 July 2026",
-      title: "New Constitutional Bench Decision",
-      description:
-        "The Supreme Court has issued a significant constitutional judgment affecting civil litigation.",
-    },
-    {
-      category: "SECP",
-      date: "23 July 2026",
-      title: "SECP Updates Company Registration Rules",
-      description:
-        "SECP has introduced updated compliance requirements for company registration in Pakistan.",
-    },
-  ];
+  const [articles, setArticles] = useState<Article[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch("/api/legal-news")
+      .then((res) => res.json())
+      .then((data) => {
+        setArticles(data.articles || []);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error(err);
+        setLoading(false);
+      });
+  }, []);
 
   return (
     <section className="py-20 bg-gray-100">
@@ -35,36 +42,63 @@ export default function LatestNews() {
           Stay updated with the latest legal developments in Pakistan.
         </p>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        {loading ? (
+          <div className="text-center text-lg text-gray-600">
+            Loading latest news...
+          </div>
+        ) : (
+          <div className="grid md:grid-cols-3 gap-8">
 
-          {news.map((item) => (
-            <div
-              key={item.title}
-              className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition duration-300"
-            >
-              <span className="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
-                {item.category}
-              </span>
+            {articles.map((item, index) => (
 
-              <p className="text-sm text-gray-500 mt-4">
-                {item.date}
-              </p>
+              <div
+                key={index}
+                className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300"
+              >
 
-              <h3 className="text-xl font-bold text-[#0B1F3A] mt-2">
-                {item.title}
-              </h3>
+                <img
+                  src={
+                    item.image ||
+                    "https://placehold.co/600x400?text=Legal+News"
+                  }
+                  alt={item.title}
+                  className="w-full h-52 object-cover"
+                />
 
-              <p className="text-gray-600 mt-4">
-                {item.description}
-              </p>
+                <div className="p-6">
 
-              <button className="mt-6 text-blue-700 font-semibold hover:underline">
-                Read More →
-              </button>
-            </div>
-          ))}
+                  <div className="flex justify-between text-sm text-gray-500 mb-3">
+                    <span>{item.source?.name || "Legal News"}</span>
+                    <span>
+                      {new Date(item.publishedAt).toLocaleDateString()}
+                    </span>
+                  </div>
 
-        </div>
+                  <h3 className="text-xl font-bold text-[#0B1F3A] line-clamp-2">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-gray-600 mt-4 line-clamp-3">
+                    {item.description}
+                  </p>
+
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-6 bg-[#0B1F3A] text-white px-5 py-3 rounded-lg hover:bg-blue-800 transition"
+                  >
+                    Read Full Article →
+                  </a>
+
+                </div>
+
+              </div>
+
+            ))}
+
+          </div>
+        )}
 
       </div>
     </section>
