@@ -44,12 +44,12 @@ export default function LegalTeam() {
               key={lawyer.name}
               className="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300"
             >
-             <Image
+           <Image
   src={lawyer.image}
   alt={lawyer.name}
   width={500}
   height={500}
-  className="w-full h-72 object-contain bg-slate-50 p-6"
+  className="w-full h-96 object-contain bg-slate-50 p-2"
 />
 
               <div className="p-6">

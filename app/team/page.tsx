@@ -139,31 +139,30 @@ export default function TeamPage() {
                   </p>
                                     {/* Action Buttons */}
 
-                  <div className="grid grid-cols-2 gap-3 mt-8">
+                  <div className="grid grid-cols-2 gap-3 mt-6">
+  <a
+    href="mailto:shirazlegalassociates@gmail.com"
+    className="bg-[#0B1F3A] text-white py-3 rounded-xl font-semibold hover:bg-blue-800 transition text-center"
+  >
+    📧 Email
+  </a>
 
-                    <a
-                      href={`mailto:${member.email}`}
-                      className="bg-[#0B1F3A] text-white py-3 rounded-xl font-semibold hover:bg-[#123C73] transition"
-                    >
-                      📧 Email
-                    </a>
+  <a
+    href="tel:+923009119583"
+    className="bg-[#0B1F3A] text-white py-3 rounded-xl font-semibold hover:bg-blue-800 transition text-center"
+  >
+    📞 Call
+  </a>
 
-                    <a
-                      href={`tel:${member.phone}`}
-                      className="bg-blue-700 text-white py-3 rounded-xl font-semibold hover:bg-blue-800 transition"
-                    >
-                      📞 Call
-                    </a>
-
-                    <a
-                      href="https://wa.me/923155188318"
-                      target="_blank"
-                      className="bg-green-600 text-white py-3 rounded-xl font-semibold hover:bg-green-700 transition col-span-2"
-                    >
-                      💬 WhatsApp
-                    </a>
-
-                  </div>
+  <a
+    href="https://wa.me/923009119583"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-green-600 text-white py-3 rounded-xl font-semibold hover:bg-green-700 transition text-center col-span-2"
+  >
+    💬 WhatsApp
+  </a>
+</div>
 
                 </div>
 
