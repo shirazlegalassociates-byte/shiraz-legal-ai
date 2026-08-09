@@ -158,57 +158,115 @@ export default function ContactPage() {
 
             <div className="grid md:grid-cols-2 gap-6">
 
-              <input
-                type="text"
-                placeholder="Full Name"
-                className="border border-gray-300 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#123C73]"
-              />
+  {/* Full Name */}
+  <div>
+    <label
+      htmlFor="full-name"
+      className="block text-sm font-semibold text-gray-700 mb-2"
+    >
+      Full Name
+    </label>
 
-              <input
-                type="email"
-                placeholder="Email Address"
-                className="border border-gray-300 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#123C73]"
-              />
+    <input
+      id="full-name"
+      name="name"
+      type="text"
+      placeholder="Full Name"
+      className="w-full border border-gray-300 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#123C73]"
+    />
+  </div>
 
-            </div>
+  {/* Email Address */}
+  <div>
+    <label
+      htmlFor="email"
+      className="block text-sm font-semibold text-gray-700 mb-2"
+    >
+      Email Address
+    </label>
 
-            <div className="grid md:grid-cols-2 gap-6 mt-6">
+    <input
+      id="email"
+      name="email"
+      type="email"
+      placeholder="Email Address"
+      className="w-full border border-gray-300 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#123C73]"
+    />
+  </div>
 
-              <input
-                type="text"
-                placeholder="Phone Number"
-                className="border border-gray-300 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#123C73]"
-              />
+</div>
 
-              <select className="border border-gray-300 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#123C73]">
+            <div className="grid md:grid-cols-2 gap-6">
 
-                <option>Select Practice Area</option>
+  {/* Phone Number */}
+  <div>
+    <label
+      htmlFor="phone"
+      className="block text-sm font-semibold text-gray-700 mb-2"
+    >
+      Phone Number
+    </label>
 
-                <option>Civil Law</option>
-                <option>Criminal Law</option>
-                <option>Family Law</option>
-                <option>Corporate Law</option>
-                <option>Tax Law</option>
-                <option>Property Law</option>
-                <option>Immigration Law</option>
-                <option>Constitutional Law</option>
+    <input
+      id="phone"
+      name="phone"
+      type="text"
+      placeholder="Phone Number"
+      className="w-full border border-gray-300 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#123C73]"
+    />
+  </div>
 
-              </select>
+  {/* Practice Area */}
+  <div>
+    <label
+      htmlFor="practice"
+      className="block text-sm font-semibold text-gray-700 mb-2"
+    >
+      Practice Area
+    </label>
 
-            </div>
+    <select
+      id="practice"
+      name="practice"
+      className="w-full border border-gray-300 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#123C73]"
+    >
+      <option>Select Practice Area</option>
+      <option>Civil Law</option>
+      <option>Criminal Law</option>
+      <option>Family Law</option>
+      <option>Corporate Law</option>
+      <option>Tax Law</option>
+      <option>Property Law</option>
+      <option>Immigration Law</option>
+      <option>Constitutional Law</option>
+    </select>
+  </div>
 
-            <textarea
-              rows={6}
-              placeholder="Write your message..."
-              className="w-full border border-gray-300 rounded-xl px-5 py-4 mt-6 focus:outline-none focus:ring-2 focus:ring-[#123C73]"
-            ></textarea>
+</div>
 
-            <button
-              type="submit"
-              className="mt-8 w-full bg-[#0B1F3A] hover:bg-[#123C73] text-white py-4 rounded-xl text-lg font-bold transition duration-300"
-            >
-              Send Message
-            </button>
+           <label
+  htmlFor="message"
+  className="block text-sm font-semibold text-[#0B1F3A] mb-2"
+>
+  Message
+</label>
+
+<textarea
+  id="message"
+  name="message"
+  rows={6}
+  placeholder="Write your message..."
+  className="w-full border border-gray-300 rounded-xl px-5 py-4
+  focus:outline-none focus:ring-2 focus:ring-[#123C73]"
+></textarea>
+
+           <button
+  type="submit"
+  aria-label="Send contact message"
+  className="mt-8 w-full bg-[#0B1F3A] hover:bg-[#123C73] text-white py-4 rounded-xl text-lg font-bold transition duration-300"
+>
+  Send Message
+</button>
 
           </form>
 

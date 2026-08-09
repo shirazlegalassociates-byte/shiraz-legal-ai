@@ -69,9 +69,13 @@ export default function LegalTeam() {
                   
                 </p>
 
-                <button className="mt-6 w-full bg-[#0B1F3A] text-white py-3 rounded-xl hover:bg-blue-800 transition">
-                  View Profile
-                </button>
+               <button
+  type="button"
+  aria-label={`View profile of ${lawyer.name}`}
+  className="mt-6 w-full bg-[#0B1F3A] text-white py-3 rounded-xl hover:bg-blue-800 transition"
+>
+  View Profile
+</button>
               </div>
             </div>
           ))}

@@ -46,14 +46,14 @@ export default function Hero() {
         {/* Right Side */}
         <div>
 
-          <Image 
-            src="/images/hero.jpg"
-            alt="Shiraz Legal Associates"
-            width={700}
-            height={700}
-            className="rounded-3xl shadow-2xl object-cover w-full h-[520px]"
-            priority
-          />
+         <Image 
+  src="/images/hero.jpg"
+  alt="Shiraz Legal Associates"
+  width={700}
+  height={700}
+  className="rounded-3xl shadow-2xl object-cover w-full h-auto"
+  priority
+/>
 <div className="grid grid-cols-3 gap-4 mt-8">
 
   <div className="bg-white/10 backdrop-blur rounded-xl p-4 text-center">

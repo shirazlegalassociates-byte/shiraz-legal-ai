@@ -11,16 +11,18 @@ export default function Navbar() {
         {/* Logo + Company Name */}
         <Link href="/" className="flex items-center gap-4">
 
-          <Image
+          <div className="relative w-[70px] h-[70px] shrink-0">
+         <Image
   src="/images/logo.png"
-  alt="Logo"
+  alt="Shiraz Legal Associates logo"
   width={70}
   height={70}
   priority
+  className="h-[70px] w-[70px] object-contain"
 />
+          </div>
 
           <div>
-
             <h1 className="text-2xl font-bold text-[#0B1F3A] leading-tight">
               Shiraz Legal Associates
             </h1>
@@ -32,7 +34,6 @@ export default function Navbar() {
             <p className="text-xs text-blue-600">
               AI Powered Legal Services
             </p>
-
           </div>
 
         </Link>

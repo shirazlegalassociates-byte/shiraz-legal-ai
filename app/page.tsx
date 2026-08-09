@@ -1,6 +1,5 @@
-"use client";
+import type { Metadata } from "next";
 import Statistics from "./components/Statistics";
-console.log("HOME ENV =", process.env.GNEWS_API_KEY);
 import LegalTeam from "./components/LegalTeam";
 import LatestNews from "./components/LatestNews";
 import PracticeAreas from "./components/home/PracticeAreas";
@@ -11,22 +10,41 @@ import Hero from "./components/Hero";
 import AIChat from "./components/AIChat";
 import Footer from "./components/Footer";
 
+export const metadata: Metadata = {
+  title: "Shiraz Legal Associates",
+  description:
+    "Shiraz Legal Associates provides trusted legal services across Pakistan including Civil, Criminal, Family, Corporate, Property, Tax and Immigration Law. Book your consultation today.",
+  keywords: [
+    "Law Firm Pakistan",
+    "Advocate Abbottabad",
+    "Civil Lawyer",
+    "Criminal Lawyer",
+    "Family Lawyer",
+    "Corporate Lawyer",
+    "Property Lawyer",
+    "Tax Lawyer",
+    "Pakistan Legal Services",
+  ],
+};
+
 export default function Home() {
   return (
     <>
-     <Hero />
-<Statistics />
-<PracticeAreas />
+      <Hero />
 
-<LegalTeam />
+      <Statistics />
 
-<AIChat />
+      <LegalTeam />
+
+      <LatestNews />
+
+      <PracticeAreas />
+
+      <AIChat />
 
       <Testimonials />
 
-     <FAQ />
-
-<LatestNews />
+      <FAQ />
 
       <Footer />
 

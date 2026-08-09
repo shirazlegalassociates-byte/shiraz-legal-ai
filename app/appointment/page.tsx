@@ -147,25 +147,41 @@ export default function AppointmentPage() {
 
             <div className="grid md:grid-cols-2 gap-6">
 
-              <input
-                type="text"
-                name="name"
-                placeholder="Full Name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                className="w-full border border-gray-300 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#123C73]"
-              />
+              <label
+  htmlFor="appointment-name"
+  className="block text-sm font-semibold text-gray-700 mb-2"
+>
+  Full Name
+</label>
 
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Phone Number"
-                value={formData.phone}
-                onChange={handleChange}
-                required
-                className="w-full border border-gray-300 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#123C73]"
-              />
+<input
+  id="appointment-name"
+  type="text"
+  name="name"
+  placeholder="Full Name"
+  value={formData.name}
+  onChange={handleChange}
+  required
+  className="w-full border border-gray-300 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#123C73]"
+/>
+
+             <label
+  htmlFor="appointment-phone"
+  className="block text-sm font-semibold text-gray-700 mb-2"
+>
+  Phone Number
+</label>
+
+<input
+  id="appointment-phone"
+  type="tel"
+  name="phone"
+  placeholder="Phone Number"
+  value={formData.phone}
+  onChange={handleChange}
+  required
+  className="w-full border border-gray-300 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#123C73]"
+/>
 
             </div>
 
@@ -173,34 +189,50 @@ export default function AppointmentPage() {
 
             <div className="grid md:grid-cols-2 gap-6">
 
-              <input
-                type="email"
-                name="email"
-                placeholder="Email Address"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="w-full border border-gray-300 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#123C73]"
-              />
+              <label
+  htmlFor="appointment-email"
+  className="block text-sm font-semibold text-gray-700 mb-2"
+>
+  Email Address
+</label>
 
-              <select
-                name="practice"
-                value={formData.practice}
-                onChange={handleChange}
-                required
-                className="w-full border border-gray-300 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#123C73]"
-              >
-                <option value="">Select Practice Area</option>
-                <option value="Civil Law">Civil Law</option>
-                <option value="Criminal Law">Criminal Law</option>
-                <option value="Family Law">Family Law</option>
-                <option value="Corporate Law">Corporate Law</option>
-                <option value="Property Law">Property Law</option>
-                <option value="Immigration Law">Immigration Law</option>
-                <option value="Tax Law">Tax Law</option>
-                <option value="Human Rights">Human Rights</option>
-                <option value="Constitutional Law">Constitutional Law</option>
-              </select>
+<input
+  id="appointment-email"
+  type="email"
+  name="email"
+  placeholder="Email Address"
+  value={formData.email}
+  onChange={handleChange}
+  required
+  className="w-full border border-gray-300 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#123C73]"
+/>
+
+              <label
+  htmlFor="appointment-practice"
+  className="block text-sm font-semibold text-gray-700 mb-2"
+>
+  Practice Area
+</label>
+
+<select
+  id="appointment-practice"
+  name="practice"
+  value={formData.practice}
+  onChange={handleChange}
+  required
+  className="w-full border border-gray-300 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#123C73]"
+>
+  <option value="">Select Practice Area</option>
+  <option value="Civil Law">Civil Law</option>
+  <option value="Criminal Law">Criminal Law</option>
+  <option value="Family Law">Family Law</option>
+  <option value="Corporate Law">Corporate Law</option>
+  <option value="Property Law">Property Law</option>
+  <option value="Immigration Law">Immigration Law</option>
+  <option value="Tax Law">Tax Law</option>
+  <option value="Human Rights">Human Rights</option>
+  <option value="Constitutional Law">Constitutional Law</option>
+</select>
 
             </div>
 
@@ -208,27 +240,43 @@ export default function AppointmentPage() {
 
             <div className="grid md:grid-cols-2 gap-6">
 
-              <select
-                name="consultation"
-                value={formData.consultation}
-                onChange={handleChange}
-                required
-                className="w-full border border-gray-300 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#123C73]"
-              >
-                <option value="">Consultation Type</option>
-                <option value="Office Visit">Office Visit</option>
-                <option value="Online Meeting">Online Meeting</option>
-                <option value="Phone Consultation">Phone Consultation</option>
-              </select>
+             <label
+  htmlFor="appointment-consultation"
+  className="block text-sm font-semibold text-gray-700 mb-2"
+>
+  Consultation Type
+</label>
 
-              <input
-                type="date"
-                name="date"
-                value={formData.date}
-                onChange={handleChange}
-                required
-                className="w-full border border-gray-300 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#123C73]"
-              />
+<select
+  id="appointment-consultation"
+  name="consultation"
+  value={formData.consultation}
+  onChange={handleChange}
+  required
+  className="w-full border border-gray-300 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#123C73]"
+>
+  <option value="">Consultation Type</option>
+  <option value="Office Visit">Office Visit</option>
+  <option value="Online Meeting">Online Meeting</option>
+  <option value="Phone Consultation">Phone Consultation</option>
+</select>
+
+             <label
+  htmlFor="appointment-date"
+  className="block text-sm font-semibold text-gray-700 mb-2"
+>
+  Preferred Date
+</label>
+
+<input
+  id="appointment-date"
+  type="date"
+  name="date"
+  value={formData.date}
+  onChange={handleChange}
+  required
+  className="w-full border border-gray-300 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#123C73]"
+/>
 
             </div>
 
@@ -236,14 +284,22 @@ export default function AppointmentPage() {
 
             <div className="grid md:grid-cols-2 gap-6">
 
-              <input
-                type="time"
-                name="time"
-                value={formData.time}
-                onChange={handleChange}
-                required
-                className="w-full border border-gray-300 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#123C73]"
-              />
+            <label
+  htmlFor="appointment-time"
+  className="block text-sm font-semibold text-gray-700 mb-2"
+>
+  Preferred Time
+</label>
+
+<input
+  id="appointment-time"
+  type="time"
+  name="time"
+  value={formData.time}
+  onChange={handleChange}
+  required
+  className="w-full border border-gray-300 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#123C73]"
+/>
 
               <div className="flex items-center justify-center rounded-xl bg-blue-50 border border-blue-200 p-4">
                 <p className="text-[#0B1F3A] font-semibold text-center">
@@ -253,23 +309,32 @@ export default function AppointmentPage() {
 
             </div>
 
-            <textarea
-              rows={6}
-              name="message"
-              placeholder="Briefly describe your legal issue..."
-              value={formData.message}
-              onChange={handleChange}
-              required
-              className="w-full border border-gray-300 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#123C73]"
-            ></textarea>
+           <label
+  htmlFor="appointment-message"
+  className="block text-sm font-semibold text-gray-700 mb-2"
+>
+  Legal Issue / Message
+</label>
 
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full bg-[#0B1F3A] hover:bg-[#123C73] text-white py-4 rounded-xl text-lg font-bold transition duration-300 disabled:opacity-50"
-            >
-              {loading ? "Sending Appointment..." : "Book Appointment"}
-            </button>
+<textarea
+  id="appointment-message"
+  rows={6}
+  name="message"
+  placeholder="Briefly describe your legal issue..."
+  value={formData.message}
+  onChange={handleChange}
+  required
+  className="w-full border border-gray-300 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#123C73]"
+></textarea>
+
+           <button
+  type="submit"
+  aria-label="Submit appointment booking request"
+  disabled={loading}
+  className="w-full bg-[#0B1F3A] hover:bg-[#123C73] text-white py-4 rounded-xl text-lg font-bold transition duration-300 disabled:opacity-50"
+>
+  {loading ? "Sending Appointment..." : "Book Appointment"}
+</button>
                       </form>
 
         </div>
