@@ -3,8 +3,6 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import Link from "next/link";
-
-import Navbar from "../components/layout/Navbar";
 import Footer from "../components/Footer";
 import WhatsAppButton from "../components/WhatsAppButton";
 
@@ -98,9 +96,7 @@ export default function AppointmentPage() {
 
     <>
 
-      <Navbar />
-
-      {/* Hero */}
+            {/* Hero */}
 
       <section className="bg-gradient-to-r from-[#0B1F3A] via-[#123C73] to-[#1D4E89] text-white pt-32 pb-20">
 

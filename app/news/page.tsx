@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Navbar from "../components/layout/Navbar";
 import Footer from "../components/Footer";
 
 async function getNews() {
@@ -34,9 +33,7 @@ export default async function NewsPage() {
 
   return (
     <>
-      <Navbar />
-
-      <section className="bg-gradient-to-r from-[#0B1F3A] via-[#123C73] to-[#1D4E89] text-white pt-32 pb-20">
+            <section className="bg-gradient-to-r from-[#0B1F3A] via-[#123C73] to-[#1D4E89] text-white pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight">
             Legal News & Updates

@@ -22,7 +22,6 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <Navbar />
 
       {/* Hero Section */}
 
@@ -158,43 +157,30 @@ export default function ContactPage() {
 
             <div className="grid md:grid-cols-2 gap-6">
 
-  {/* Full Name */}
-  <div>
-    <label
-      htmlFor="full-name"
-      className="block text-sm font-semibold text-gray-700 mb-2"
-    >
-      Full Name
-    </label>
+              <label htmlFor="contact-name" className="sr-only">
+ 
+  Full Name
+</label>
 
-    <input
-      id="full-name"
-      name="name"
-      type="text"
-      placeholder="Full Name"
-      className="w-full border border-gray-300 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#123C73]"
-    />
-  </div>
+<input
+  id="contact-name"
+  type="tel"
+  placeholder="Full Name"
+  className="border border-gray-300 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#123C73]"
+/>
 
-  {/* Email Address */}
-  <div>
-    <label
-      htmlFor="email"
-      className="block text-sm font-semibold text-gray-700 mb-2"
-    >
-      Email Address
-    </label>
+             <label htmlFor="contact-email" className="sr-only">
+  Email Address
+</label>
 
-    <input
-      id="email"
-      name="email"
-      type="email"
-      placeholder="Email Address"
-      className="w-full border border-gray-300 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#123C73]"
-    />
-  </div>
+<input
+  id="contact-email"
+  type="email"
+  placeholder="Email Address"
+  className="border border-gray-300 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#123C73]"
+/>
 
-</div>
+            </div>
 
             <div className="grid md:grid-cols-2 gap-6">
 
@@ -244,21 +230,11 @@ export default function ContactPage() {
 
 </div>
 
-           <label
-  htmlFor="message"
-  className="block text-sm font-semibold text-[#0B1F3A] mb-2"
->
-  Message
-</label>
-
-<textarea
-  id="message"
-  name="message"
-  rows={6}
-  placeholder="Write your message..."
-  className="w-full border border-gray-300 rounded-xl px-5 py-4
-  focus:outline-none focus:ring-2 focus:ring-[#123C73]"
-></textarea>
+            <textarea
+              rows={6}
+              placeholder="Write your message..."
+              className="w-full border border-gray-300 rounded-xl px-5 py-4 mt-6 focus:outline-none focus:ring-2 focus:ring-[#123C73]"
+            ></textarea>
 
            <button
   type="submit"

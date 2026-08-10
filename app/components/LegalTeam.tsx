@@ -4,78 +4,116 @@ const lawyers = [
   {
     name: "Shahbaz Malik",
     title: "Advocate High Court",
-    
-    specialization: "Civil Law • Criminal Law • Corporate Law • Immigration Law",
-   image: "/images/shahbaz-malik.jpeg",
+    specialization:
+      "Civil Law • Criminal Law • Corporate Law • Immigration Law",
+    image: "/images/shahbaz-malik.jpeg",
   },
   {
     name: "Umer Hayyat",
-    title:"Advocate High Court",
-
+    title: "Advocate High Court",
     specialization: "Family Law • Civil Law • Criminal Law",
-   image: "/images/umer-hayyat.jpeg",
+    image: "/images/umer-hayyat.jpeg",
   },
   {
     name: "Jibran Pirzada",
     title: "Barrister",
-  
-    specialization: "Civil Law • Business Law • Criminal Law • Family Law",
-   image: "/images/jibran-pirzada.jpeg",
+    specialization:
+      "Civil Law • Business Law • Criminal Law • Family Law",
+    image: "/images/jibran-pirzada.jpeg",
   },
 ];
 
 export default function LegalTeam() {
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="bg-slate-50 py-20 lg:py-24">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
-        <h2 className="text-4xl font-bold text-center text-[#0B1F3A]">
-          Meet Our Legal Team
-        </h2>
+        {/* Section Heading */}
+        <div className="text-center max-w-3xl mx-auto mb-14">
+          <span className="inline-block text-sm font-bold tracking-widest uppercase text-blue-700 mb-3">
+            Our Professionals
+          </span>
 
-        <p className="text-center text-gray-600 mt-4 mb-14">
-          Experienced legal professionals committed to protecting your rights
-          and delivering trusted legal solutions.
-        </p>
+          <h2 className="text-4xl lg:text-5xl font-extrabold text-[#0B1F3A]">
+            Meet Our Legal Team
+          </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <p className="text-gray-600 mt-5 text-lg leading-8">
+            Experienced legal professionals committed to protecting your
+            rights and delivering trusted legal solutions.
+          </p>
+        </div>
+
+        {/* Team Cards */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
           {lawyers.map((lawyer) => (
             <div
               key={lawyer.name}
-              className="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300"
+              className="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-md hover:shadow-2xl transition-all duration-300"
             >
-           <Image
-  src={lawyer.image}
-  alt={lawyer.name}
-  width={500}
-  height={500}
-  className="w-full h-96 object-contain bg-slate-50 p-2"
-/>
 
-              <div className="p-6">
+              {/* Lawyer Image */}
+              <div className="relative bg-slate-100 h-[430px] overflow-hidden">
+                <Image
+                  src={lawyer.image}
+                  alt={lawyer.name}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-contain p-2 group-hover:scale-[1.03] transition-transform duration-500"
+                />
+
+                {/* Bottom gradient */}
+                <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/30 to-transparent pointer-events-none" />
+              </div>
+
+              {/* Information */}
+              <div className="p-7">
+
                 <h3 className="text-2xl font-bold text-[#0B1F3A]">
                   {lawyer.name}
                 </h3>
 
-                <p className="text-blue-700 font-semibold mt-2">
-                  {lawyer.title}
-                </p>
+                <div className="flex items-center gap-2 mt-2">
+                  <span className="w-2 h-2 rounded-full bg-yellow-400" />
+                  <p className="text-blue-700 font-semibold">
+                    {lawyer.title}
+                  </p>
+                </div>
 
-                <p className="text-gray-600 mt-4">
+                <div className="h-px bg-gray-200 my-5" />
+
+                <p className="text-gray-600 leading-7 text-sm">
                   {lawyer.specialization}
                 </p>
 
-                <p className="text-sm text-gray-500 mt-3">
-                  
-                </p>
+                {/* Buttons */}
+                <div className="grid grid-cols-2 gap-3 mt-6">
 
-               <button
-  type="button"
-  aria-label={`View profile of ${lawyer.name}`}
-  className="mt-6 w-full bg-[#0B1F3A] text-white py-3 rounded-xl hover:bg-blue-800 transition"
->
-  View Profile
-</button>
+                  <a
+                    href="mailto:shirazlegalassociates@gmail.com"
+                    className="flex items-center justify-center border border-[#0B1F3A] text-[#0B1F3A] py-3 rounded-xl font-semibold hover:bg-[#0B1F3A] hover:text-white transition"
+                  >
+                    ✉ Email
+                  </a>
+
+                  <a
+                    href="tel:+923009119583"
+                    className="flex items-center justify-center border border-[#0B1F3A] text-[#0B1F3A] py-3 rounded-xl font-semibold hover:bg-[#0B1F3A] hover:text-white transition"
+                  >
+                    ☎ Call
+                  </a>
+
+                  <a
+                    href="https://wa.me/923009119583"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="col-span-2 flex items-center justify-center bg-green-600 text-white py-3 rounded-xl font-semibold hover:bg-green-700 transition"
+                  >
+                    💬 WhatsApp
+                  </a>
+
+                </div>
+
               </div>
             </div>
           ))}

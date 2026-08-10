@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import Navbar from "../components/layout/Navbar";
 import Footer from "../components/Footer";
 
 const practiceAreas = [
@@ -75,8 +74,7 @@ export const metadata: Metadata = {
 export default function PracticeAreasPage() {
   return (
     <>
-      <Navbar />
-
+      
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-[#0B1F3A] via-[#123C73] to-[#1D4E89] text-white pt-32 pb-20">
 
@@ -137,9 +135,13 @@ export default function PracticeAreasPage() {
                     {area.description}
                   </p>
 
-                  <button className="mt-6 w-full bg-[#0B1F3A] text-white py-3 rounded-xl font-semibold hover:bg-[#123C73] transition">
-                    Learn More
-                  </button>
+                 <button
+  type="button"
+  aria-label={`Learn more about ${area.title}`}
+  className="mt-6 w-full bg-[#0B1F3A] text-white py-3 rounded-xl font-semibold hover:bg-[#123C73] transition"
+>
+  Learn More
+</button>
 
                 </div>
 
