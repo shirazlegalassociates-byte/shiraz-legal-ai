@@ -57,8 +57,6 @@ export const metadata: Metadata = {
 export default function TeamPage() {
   return (
     <>
-      <Navbar />
-
       {/* Hero Section */}
 
       <section className="bg-gradient-to-r from-[#0B1F3A] via-[#123C73] to-[#1D4E89] text-white pt-32 pb-20">

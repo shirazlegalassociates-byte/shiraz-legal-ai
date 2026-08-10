@@ -3,77 +3,123 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-   <section className="bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 text-white pt-44 pb-24">
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    <section className="bg-[#071A33] text-white">
+      <div className="max-w-7xl mx-auto px-6 py-20 lg:py-28">
+        <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
 
-        {/* Left Side */}
-        <div>
+          {/* Left Side */}
+          <div>
 
-          <span className="bg-yellow-400 text-black px-4 py-2 rounded-full font-semibold">
-            AI Powered Legal Services
-          </span>
+            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-4 py-2 rounded-full">
+              <span className="w-2 h-2 bg-yellow-400 rounded-full"></span>
 
-          <h1 className="text-6xl font-extrabold mt-6 leading-tight">
-            Shiraz Legal
-            <span className="text-yellow-400"> Associates</span>
-          </h1>
+              <span className="text-sm font-semibold tracking-wide text-gray-200">
+                AI-POWERED LEGAL SERVICES
+              </span>
+            </div>
 
-          <p className="mt-8 text-xl text-gray-200 leading-8">
-            Professional legal guidance for Pakistani law.
-            Get instant AI assistance or book an appointment
-            with our legal experts.
-          </p>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold mt-7 leading-[1.05] tracking-tight">
+              Trusted Legal Counsel.
+              <br />
 
-          <div className="flex gap-5 mt-10">
-  <Link
-    href="/appointment"
-    className="bg-yellow-400 text-black px-8 py-4 rounded-xl font-bold hover:bg-yellow-300 transition"
-  >
-    Book Appointment
-  </Link>
+              <span className="text-yellow-400">
+                Strategic Representation.
+              </span>
+            </h1>
 
-  <a
-    href="#ai"
-    className="border border-white px-8 py-4 rounded-xl hover:bg-white hover:text-blue-900 transition"
-  >
-    Ask AI
-  </a>
+            <p className="mt-7 text-lg md:text-xl text-gray-300 leading-8 max-w-2xl">
+              Shiraz Legal Associates provides professional legal
+              representation and trusted guidance across Pakistan,
+              supported by modern AI-powered legal assistance.
+            </p>
+
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 mt-10">
+
+              <a
+                href="mailto:shirazlegalassociates@gmail.com"
+                className="bg-yellow-400 text-[#071A33] px-8 py-4 rounded-xl font-bold text-center hover:bg-yellow-300 transition shadow-lg"
+              >
+                Book a Consultation
+              </a>
+
+              <a
+                href="#ai"
+                className="border border-white/30 bg-white/5 px-8 py-4 rounded-xl font-semibold text-center hover:bg-white hover:text-[#071A33] transition"
+              >
+                Ask AI Legal Assistant
+              </a>
+
+            </div>
+
+            {/* Trust Indicators */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 mt-12 pt-8 border-t border-white/10">
+
+              <div>
+                <p className="text-2xl font-bold text-yellow-400">
+                  8+
+                </p>
+                <p className="text-sm text-gray-400 mt-1">
+                  Practice Areas
+                </p>
+              </div>
+
+              <div>
+                <p className="text-2xl font-bold text-yellow-400">
+                  24/7
+                </p>
+                <p className="text-sm text-gray-400 mt-1">
+                  AI Assistance
+                </p>
+              </div>
+
+              <div>
+                <p className="text-2xl font-bold text-yellow-400">
+                  Pakistan & International
+                </p>
+                <p className="text-sm text-gray-400 mt-1">
+                  Legal Focus
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+          {/* Right Side */}
+          <div className="relative">
+
+            <div className="absolute -inset-4 bg-yellow-400/10 rounded-[2rem] blur-2xl"></div>
+
+            <div className="relative overflow-hidden rounded-[2rem] border border-white/10 shadow-2xl">
+
+              <Image
+                src="/images/hero.jpg"
+                alt="Shiraz Legal Associates"
+                width={700}
+                height={700}
+                className="w-full h-[500px] lg:h-[620px] object-cover"
+                priority
+              />
+
+              {/* Image Overlay */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#071A33] via-[#071A33]/70 to-transparent p-8 pt-24">
+
+                <p className="text-sm uppercase tracking-[0.2em] text-yellow-400 font-semibold">
+                  Shiraz Legal Associates
+                </p>
+
+                <p className="text-xl font-bold mt-2">
+                  Professional Legal Representation
+                </p>
+
+              </div>
+
+            </div>
 
           </div>
 
         </div>
-
-        {/* Right Side */}
-        <div>
-
-         <Image 
-  src="/images/hero.jpg"
-  alt="Shiraz Legal Associates"
-  width={700}
-  height={700}
-  className="rounded-3xl shadow-2xl object-cover w-full h-auto"
-  priority
-/>
-<div className="grid grid-cols-3 gap-4 mt-8">
-
-  <div className="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
-    <h3 className="text-3xl font-bold text-yellow-400">12+</h3>
-    <p className="text-sm text-gray-200">Years Experience</p>
-  </div>
-
-  <div className="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
-    <h3 className="text-3xl font-bold text-yellow-400">8+</h3>
-    <p className="text-sm text-gray-200">Practice Areas</p>
-  </div>
-
-  <div className="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
-    <h3 className="text-3xl font-bold text-yellow-400">24/7</h3>
-    <p className="text-sm text-gray-200">AI Assistance</p>
-  </div>
-
-</div>
-        </div>
-
       </div>
     </section>
   );
