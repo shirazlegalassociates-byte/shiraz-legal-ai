@@ -52,120 +52,82 @@ const practiceAreas = [
   },
 ];
 
-export default function PracticeAreasPage() {
+export default function PracticeAreas() {
   return (
-    <main>
+    <section className="py-24 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-6">
 
-      {/* Hero Section */}
+        {/* Section Heading */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="inline-block text-sm font-bold tracking-widest uppercase text-blue-700 mb-4">
+            Our Expertise
+          </span>
 
-      <section className="bg-[#0B1F3A] text-white py-24">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-
-          <h1 className="text-5xl font-bold">
-            Practice Areas
-          </h1>
-
-          <p className="mt-6 text-xl text-gray-300 max-w-3xl mx-auto">
-            Comprehensive legal services delivered by experienced advocates
-            and legal consultants.
-          </p>
-
-        </div>
-      </section>
-
-      {/* Practice Areas */}
-
-      <section className="py-20 bg-gray-50">
-
-        <div className="max-w-7xl mx-auto px-6">
-
-          <h2 className="text-4xl font-bold text-center text-[#0B1F3A]">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#0B1F3A]">
             Our Legal Services
           </h2>
 
-          <p className="text-center text-gray-600 mt-4 mb-14">
-            We provide expert legal services across multiple areas of law.
+          <p className="text-gray-600 text-lg mt-5 leading-8">
+            Comprehensive legal solutions delivered by experienced advocates
+            and legal consultants across Pakistan.
           </p>
+        </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-            {practiceAreas.map((area) => (
-
-              <div
-                key={area.title}
-                className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300"
-              >
-
+        {/* Service Cards */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-7">
+          {practiceAreas.map((area) => (
+            <div
+              key={area.title}
+              className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-gray-100"
+            >
+              {/* Image */}
+              <div className="relative h-52 overflow-hidden">
                 <Image
                   src={area.image}
                   alt={area.title}
                   width={500}
-                  height={350}
-                  className="w-full h-56 object-cover"
+                  height={300}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
 
-                <div className="p-6">
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0B1F3A]/70 via-transparent to-transparent" />
 
-                  <h3 className="text-2xl font-bold text-[#0B1F3A]">
-                    {area.title}
-                  </h3>
-
-                  <p className="text-gray-600 mt-4 leading-7">
-                    {area.description}
-                  </p>
-
-                  <button className="mt-6 w-full bg-[#0B1F3A] hover:bg-blue-800 text-white py-3 rounded-xl transition">
-                    Learn More
-                  </button>
-
-                </div>
-
+                <h3 className="absolute bottom-4 left-5 text-xl font-bold text-white">
+                  {area.title}
+                </h3>
               </div>
 
-            ))}
-                      </div>
+              {/* Content */}
+              <div className="p-6">
+                <p className="text-gray-600 leading-7 text-sm">
+                  {area.description}
+                </p>
 
+                <Link
+                  href="/practice-areas"
+                  className="inline-flex items-center mt-5 text-[#0B1F3A] font-semibold hover:text-blue-700 transition"
+                >
+                  Learn More
+                  <span className="ml-2 group-hover:translate-x-1 transition-transform">
+                    →
+                  </span>
+                </Link>
+              </div>
+            </div>
+          ))}
         </div>
 
-      </section>
-
-      {/* CTA Section */}
-
-      <section className="bg-[#0B1F3A] text-white py-20">
-
-        <div className="max-w-5xl mx-auto text-center px-6">
-
-          <h2 className="text-4xl font-bold">
-            Need Professional Legal Assistance?
-          </h2>
-
-          <p className="mt-6 text-gray-300 text-lg">
-            Our experienced advocates are ready to provide trusted legal advice
-            and representation tailored to your needs.
-          </p>
-
-          <div className="mt-10 flex flex-col sm:flex-row justify-center gap-6">
-
-            <Link
-              href="/appointment"
-              className="bg-white text-[#0B1F3A] px-8 py-4 rounded-xl font-bold hover:bg-gray-200 transition"
-            >
-              Book Consultation
-            </Link>
-
-            <Link
-              href="/contact"
-              className="border-2 border-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-[#0B1F3A] transition"
-            >
-              Contact Us
-            </Link>
-
-          </div>
-
+        {/* View All Button */}
+        <div className="text-center mt-14">
+          <Link
+            href="/practice-areas"
+            className="inline-block bg-[#0B1F3A] hover:bg-blue-800 text-white px-8 py-4 rounded-xl font-semibold transition shadow-lg"
+          >
+            View All Legal Services
+          </Link>
         </div>
 
-      </section>
-
-    </main>
+      </div>
+    </section>
   );
 }

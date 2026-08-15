@@ -1,51 +1,40 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Navbar from "../components/layout/Navbar";
-import Footer from "../components/Footer";
-import WhatsAppButton from "../components/WhatsAppButton";
+import ContactForm from "./ContactForm";
+
 export const metadata: Metadata = {
   title: "Contact Us",
-
   description:
-    "Contact Shiraz Legal Associates for professional legal advice, consultation, and representation. Visit our office in Abbottabad or schedule an appointment online.",
-
-  keywords: [
-    "Contact Shiraz Legal Associates",
-    "Law Firm Abbottabad",
-    "Legal Consultation Pakistan",
-    "Advocate Contact",
-    "Law Office Abbottabad",
-    "Book Legal Consultation",
-    "Pakistan Lawyers",
-  ],
+    "Contact Shiraz Legal Associates for professional legal services and legal consultation in Abbottabad and across Pakistan.",
 };
+
 export default function ContactPage() {
   return (
-    <>
+    <main className="bg-gray-50">
 
       {/* Hero Section */}
-
-      <section className="bg-gradient-to-r from-[#0B1F3A] via-[#123C73] to-[#1D4E89] text-white pt-32 pb-20">
-
+      <section className="bg-[#0B1F3A] text-white py-20">
         <div className="max-w-7xl mx-auto px-6 text-center">
 
-          <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight">
-            Contact Shiraz Legal Associates
+          <p className="text-blue-300 font-semibold uppercase tracking-widest text-sm">
+            Shiraz Legal Associates
+          </p>
+
+          <h1 className="text-5xl md:text-6xl font-bold mt-4">
+            Contact Us
           </h1>
 
-          <p className="mt-6 text-xl text-blue-100 leading-8 max-w-3xl mx-auto">
-            Get in touch with our experienced legal team. We are committed to
-            providing trusted legal advice, professional consultation and
-            effective legal representation across Pakistan.
+          <p className="mt-6 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-8">
+            Speak with our experienced legal professionals and get trusted
+            legal guidance tailored to your needs.
           </p>
 
         </div>
-
       </section>
 
-      {/* Contact Information */}
 
-      <section className="py-20 bg-gray-100">
+      {/* Contact Information */}
+      <section className="py-20">
 
         <div className="max-w-7xl mx-auto px-6">
 
@@ -53,23 +42,28 @@ export default function ContactPage() {
             Contact Information
           </h2>
 
-          <p className="text-center text-gray-600 mt-4 mb-14">
-            Reach us through any of the following communication channels.
+          <p className="text-center text-gray-600 mt-4 mb-12">
+            Get in touch with Shiraz Legal Associates.
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          {/* Four Contact Cards */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 
             {/* Office */}
+            <div className="bg-white rounded-2xl border border-gray-200 p-7 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
 
-            <div className="bg-white rounded-3xl border border-gray-100 shadow-lg p-8 text-center hover:-translate-y-3 hover:shadow-2xl transition-all duration-300">
+              <div className="w-14 h-14 rounded-xl bg-[#0B1F3A] flex items-center justify-center mb-5">
+                <span className="text-2xl text-white">⌖</span>
+              </div>
 
-              <div className="text-5xl mb-5">📍</div>
-
-              <h3 className="text-2xl font-bold text-[#0B1F3A]">
+              <h3 className="text-xl font-bold text-[#0B1F3A]">
                 Office
               </h3>
 
-              <p className="mt-4 text-gray-600 leading-7">
+              <div className="w-10 h-1 bg-blue-700 rounded-full mt-3 mb-4"></div>
+
+              <p className="text-gray-600 leading-7 text-sm">
                 House No. 767/2B
                 <br />
                 Opposite Shafique Plaza
@@ -79,265 +73,128 @@ export default function ContactPage() {
 
             </div>
 
+
             {/* Phone */}
+            <div className="bg-white rounded-2xl border border-gray-200 p-7 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
 
-            <div className="bg-white rounded-3xl border border-gray-100 shadow-lg p-8 text-center hover:-translate-y-3 hover:shadow-2xl transition-all duration-300">
+              <div className="w-14 h-14 rounded-xl bg-[#0B1F3A] flex items-center justify-center mb-5">
+                <span className="text-2xl text-white">☎</span>
+              </div>
 
-              <div className="text-5xl mb-5">📞</div>
-
-              <h3 className="text-2xl font-bold text-[#0B1F3A]">
+              <h3 className="text-xl font-bold text-[#0B1F3A]">
                 Phone
               </h3>
 
-              <p className="mt-4 text-gray-600 leading-7">
-                +92 315 5527144
-                <br />
-                +92 300 9119583
-              </p>
+              <div className="w-10 h-1 bg-blue-700 rounded-full mt-3 mb-4"></div>
+
+              <div className="space-y-2 text-sm">
+
+                <a
+                  href="tel:+923155527144"
+                  className="block text-gray-600 hover:text-blue-700 transition"
+                >
+                  +92 315 5527144
+                </a>
+
+                <a
+                  href="tel:+923009119583"
+                  className="block text-gray-600 hover:text-blue-700 transition"
+                >
+                  +92 300 9119583
+                </a>
+
+              </div>
 
             </div>
 
+
             {/* Email */}
+            <div className="bg-white rounded-2xl border border-gray-200 p-7 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
 
-            <div className="bg-white rounded-3xl border border-gray-100 shadow-lg p-8 text-center hover:-translate-y-3 hover:shadow-2xl transition-all duration-300">
+              <div className="w-14 h-14 rounded-xl bg-[#0B1F3A] flex items-center justify-center mb-5">
+                <span className="text-2xl text-white">✉</span>
+              </div>
 
-              <div className="text-5xl mb-5">✉️</div>
-
-              <h3 className="text-2xl font-bold text-[#0B1F3A]">
+              <h3 className="text-xl font-bold text-[#0B1F3A]">
                 Email
               </h3>
 
-              <p className="mt-4 text-gray-600 break-all">
+              <div className="w-10 h-1 bg-blue-700 rounded-full mt-3 mb-4"></div>
+
+              <a
+                href="mailto:shirazlegalassociates@gmail.com"
+                className="text-gray-600 hover:text-blue-700 transition text-sm break-all"
+              >
                 shirazlegalassociates@gmail.com
-              </p>
+              </a>
 
             </div>
 
+
             {/* Office Hours */}
+            <div className="bg-white rounded-2xl border border-gray-200 p-7 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
 
-            <div className="bg-white rounded-3xl border border-gray-100 shadow-lg p-8 text-center hover:-translate-y-3 hover:shadow-2xl transition-all duration-300">
+              <div className="w-14 h-14 rounded-xl bg-[#0B1F3A] flex items-center justify-center mb-5">
+                <span className="text-2xl text-white">◷</span>
+              </div>
 
-              <div className="text-5xl mb-5">🕒</div>
-
-              <h3 className="text-2xl font-bold text-[#0B1F3A]">
+              <h3 className="text-xl font-bold text-[#0B1F3A]">
                 Office Hours
               </h3>
 
-              <p className="mt-4 text-gray-600 leading-7">
+              <div className="w-10 h-1 bg-blue-700 rounded-full mt-3 mb-4"></div>
+
+              <p className="text-gray-600 leading-7 text-sm">
                 Monday – Saturday
                 <br />
                 9:00 AM – 6:00 PM
                 <br />
-                Sunday Closed
+                <span className="text-red-600 font-medium">
+                  Sunday Closed
+                </span>
               </p>
 
             </div>
 
           </div>
 
-        </div>
 
-      </section>
-            {/* Contact Form */}
+          {/* Contact Form */}
+          <div className="mt-16 max-w-4xl mx-auto">
+            <ContactForm />
+          </div>
 
-      <section className="py-20 bg-white">
 
-        <div className="max-w-5xl mx-auto px-6">
+          {/* Map / Location */}
+          <div className="mt-16 bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden">
 
-          <h2 className="text-4xl font-bold text-center text-[#0B1F3A]">
-            Send Us a Message
-          </h2>
+            <div className="p-8">
 
-          <p className="text-center text-gray-600 mt-4 mb-12">
-            Fill out the form below and our legal team will contact you as soon
-            as possible.
-          </p>
+              <p className="text-blue-700 font-semibold text-sm uppercase tracking-wider">
+                Find Us
+              </p>
 
-          <form className="bg-white border border-gray-100 rounded-3xl shadow-xl p-10">
+              <h2 className="text-3xl font-bold text-[#0B1F3A] mt-2">
+                Our Location
+              </h2>
 
-            <div className="grid md:grid-cols-2 gap-6">
-
-              <label htmlFor="contact-name" className="sr-only">
- 
-  Full Name
-</label>
-
-<input
-  id="contact-name"
-  type="tel"
-  placeholder="Full Name"
-  className="border border-gray-300 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#123C73]"
-/>
-
-             <label htmlFor="contact-email" className="sr-only">
-  Email Address
-</label>
-
-<input
-  id="contact-email"
-  type="email"
-  placeholder="Email Address"
-  className="border border-gray-300 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#123C73]"
-/>
+              <p className="text-gray-600 mt-3">
+                Mandian, Abbottabad, Khyber Pakhtunkhwa, Pakistan
+              </p>
 
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6">
-
-  {/* Phone Number */}
-  <div>
-    <label
-      htmlFor="phone"
-      className="block text-sm font-semibold text-gray-700 mb-2"
-    >
-      Phone Number
-    </label>
-
-    <input
-      id="phone"
-      name="phone"
-      type="text"
-      placeholder="Phone Number"
-      className="w-full border border-gray-300 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#123C73]"
-    />
-  </div>
-
-  {/* Practice Area */}
-  <div>
-    <label
-      htmlFor="practice"
-      className="block text-sm font-semibold text-gray-700 mb-2"
-    >
-      Practice Area
-    </label>
-
-    <select
-      id="practice"
-      name="practice"
-      className="w-full border border-gray-300 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#123C73]"
-    >
-      <option>Select Practice Area</option>
-      <option>Civil Law</option>
-      <option>Criminal Law</option>
-      <option>Family Law</option>
-      <option>Corporate Law</option>
-      <option>Tax Law</option>
-      <option>Property Law</option>
-      <option>Immigration Law</option>
-      <option>Constitutional Law</option>
-    </select>
-  </div>
-
-</div>
-
-            <textarea
-              rows={6}
-              placeholder="Write your message..."
-              className="w-full border border-gray-300 rounded-xl px-5 py-4 mt-6 focus:outline-none focus:ring-2 focus:ring-[#123C73]"
-            ></textarea>
-
-           <button
-  type="submit"
-  aria-label="Send contact message"
-  className="mt-8 w-full bg-[#0B1F3A] hover:bg-[#123C73] text-white py-4 rounded-xl text-lg font-bold transition duration-300"
->
-  Send Message
-</button>
-
-          </form>
-
-        </div>
-
-      </section>
-
-      {/* Social Media */}
-
-      <section className="py-20 bg-gray-100">
-
-        <div className="max-w-7xl mx-auto px-6">
-
-          <h2 className="text-4xl font-bold text-center text-[#0B1F3A]">
-            Connect With Us
-          </h2>
-
-          <p className="text-center text-gray-600 mt-4 mb-14">
-            Follow Shiraz Legal Associates on social media for legal updates and news.
-          </p>
-
-          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
-
-            <a
-              href="https://www.facebook.com/share/1GYJomBRkg/"
-              target="_blank"
-              className="bg-white rounded-2xl shadow-lg p-8 text-center hover:-translate-y-2 hover:shadow-2xl transition"
-            >
-              <div className="text-5xl mb-4">📘</div>
-              <h3 className="font-bold text-[#0B1F3A]">Facebook</h3>
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/shiraz-legal-associates-35a862381"
-              target="_blank"
-              className="bg-white rounded-2xl shadow-lg p-8 text-center hover:-translate-y-2 hover:shadow-2xl transition"
-            >
-              <div className="text-5xl mb-4">💼</div>
-              <h3 className="font-bold text-[#0B1F3A]">LinkedIn</h3>
-            </a>
-
-            <a
-              href="https://www.instagram.com/shirazlegalassociates"
-              target="_blank"
-              className="bg-white rounded-2xl shadow-lg p-8 text-center hover:-translate-y-2 hover:shadow-2xl transition"
-            >
-              <div className="text-5xl mb-4">📷</div>
-              <h3 className="font-bold text-[#0B1F3A]">Instagram</h3>
-            </a>
-
-            <a
-              href="https://www.youtube.com/@ShirazLegalAssociates"
-              target="_blank"
-              className="bg-white rounded-2xl shadow-lg p-8 text-center hover:-translate-y-2 hover:shadow-2xl transition"
-            >
-              <div className="text-5xl mb-4">▶️</div>
-              <h3 className="font-bold text-[#0B1F3A]">YouTube</h3>
-            </a>
-
-            <a
-              href="https://x.com/LegalShiraz"
-              target="_blank"
-              className="bg-white rounded-2xl shadow-lg p-8 text-center hover:-translate-y-2 hover:shadow-2xl transition"
-            >
-              <div className="text-5xl mb-4">𝕏</div>
-              <h3 className="font-bold text-[#0B1F3A]">X (Twitter)</h3>
-            </a>
-
-          </div>
-
-        </div>
-
-      </section>
-            {/* Google Map */}
-
-      <section className="py-20 bg-white">
-
-        <div className="max-w-7xl mx-auto px-6">
-
-          <h2 className="text-4xl font-bold text-center text-[#0B1F3A]">
-            Visit Our Office
-          </h2>
-
-          <p className="text-center text-gray-600 mt-4 mb-10">
-            We welcome you to visit our office for professional legal consultation.
-          </p>
-
-          <div className="rounded-3xl overflow-hidden shadow-2xl border border-gray-200">
-
-            <iframe
-              src="https://www.google.com/maps?q=Mandian+Abbottabad&output=embed"
-              width="100%"
-              height="500"
-              loading="lazy"
-            ></iframe>
+            <div className="w-full h-[400px]">
+              <iframe
+                src="https://www.google.com/maps?q=Mandian%20Abbottabad%20Pakistan&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                loading="lazy"
+                allowFullScreen
+                title="Shiraz Legal Associates Location"
+              />
+            </div>
 
           </div>
 
@@ -345,35 +202,37 @@ export default function ContactPage() {
 
       </section>
 
-      {/* Call To Action */}
 
-      <section className="bg-gradient-to-r from-[#0B1F3A] via-[#123C73] to-[#1D4E89] text-white py-20">
+      {/* CTA */}
+      <section className="bg-[#0B1F3A] text-white py-20">
 
         <div className="max-w-5xl mx-auto px-6 text-center">
 
-          <h2 className="text-5xl font-bold">
-            Need Professional Legal Advice?
+          <h2 className="text-4xl font-bold">
+            Need Professional Legal Assistance?
           </h2>
 
-          <p className="mt-6 text-xl text-blue-100 leading-8">
-            Schedule your consultation today and let our experienced legal team
-            provide trusted legal guidance tailored to your needs.
+          <p className="mt-6 text-gray-300 text-lg leading-8">
+            Our legal team is ready to discuss your matter and help you
+            understand your available legal options.
           </p>
 
-          <div className="mt-10 flex flex-col sm:flex-row justify-center gap-6">
+          <div className="mt-10 flex flex-col sm:flex-row justify-center gap-5">
 
             <Link
               href="/appointment"
-              className="bg-white text-[#0B1F3A] px-8 py-4 rounded-xl font-bold hover:bg-gray-200 transition duration-300"
+              className="bg-white text-[#0B1F3A] px-8 py-4 rounded-xl font-bold hover:bg-gray-200 transition"
             >
               Book Consultation
             </Link>
 
             <a
-              href="tel:03155527144"
-              className="border-2 border-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-[#0B1F3A] transition duration-300"
+              href="https://wa.me/923009119583"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-green-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-700 transition"
             >
-              Call Now
+              WhatsApp Us
             </a>
 
           </div>
@@ -382,9 +241,6 @@ export default function ContactPage() {
 
       </section>
 
-      <Footer />
-      <WhatsAppButton />
-
-    </>
+    </main>
   );
 }

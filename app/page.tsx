@@ -1,3 +1,4 @@
+import WhyChooseUs from "./components/home/WhyChooseUs";
 import type { Metadata } from "next";
 import Statistics from "./components/Statistics";
 import LegalTeam from "./components/LegalTeam";
@@ -39,6 +40,8 @@ export default function Home() {
       <LatestNews />
 
       <PracticeAreas />
+
+<WhyChooseUs />
 
       <AIChat />
 

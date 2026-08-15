@@ -1,69 +1,76 @@
 export default function Testimonials() {
+  const testimonials = [
+    {
+      name: "Ahmed Khan",
+      role: "Property Client",
+      text: "Shiraz Legal Associates helped me resolve my property dispute professionally. Their guidance was clear, practical and effective.",
+    },
+    {
+      name: "Fatima Ali",
+      role: "Family Law Client",
+      text: "Booking an appointment was simple, and the legal consultation exceeded my expectations. The team was professional and responsive.",
+    },
+    {
+      name: "Bilal Ahmed",
+      role: "AI Assistant User",
+      text: "The AI Legal Assistant gave me useful general legal information before I contacted the firm. It was a helpful first step.",
+    },
+  ];
+
   return (
-    <section className="py-20 bg-gray-100">
+    <section className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6">
 
-        <h2 className="text-4xl font-bold text-center text-blue-900">
-          What Our Clients Say
-        </h2>
+        {/* Heading */}
+        <div className="text-center max-w-3xl mx-auto">
+          <span className="text-sm font-bold tracking-widest uppercase text-blue-700">
+            Client Experience
+          </span>
 
-        <p className="text-center text-gray-600 mt-4">
-          Trusted legal guidance with professionalism and integrity.
-        </p>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#0B1F3A] mt-3">
+            What Our Clients Say
+          </h2>
 
-        <div className="grid md:grid-cols-3 gap-8 mt-12">
+          <p className="text-gray-600 mt-5 text-lg">
+            Trusted legal guidance delivered with professionalism,
+            integrity and a commitment to our clients.
+          </p>
+        </div>
 
-          <div className="bg-white p-8 rounded-2xl shadow-lg">
-            <div className="text-yellow-500 text-xl">★★★★★</div>
+        {/* Testimonials */}
+        <div className="grid md:grid-cols-3 gap-8 mt-16">
+          {testimonials.map((testimonial) => (
+            <div
+              key={testimonial.name}
+              className="bg-white p-8 rounded-2xl border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300"
+            >
+              {/* Quote */}
+              <div className="text-5xl text-blue-200 font-serif leading-none">
+                “
+              </div>
 
-            <p className="mt-4 text-gray-600">
-              Shiraz Legal Associates helped me resolve my property dispute
-              professionally. Their guidance was clear and effective.
-            </p>
+              {/* Stars */}
+              <div className="text-yellow-500 text-lg tracking-wide mt-2">
+                ★★★★★
+              </div>
 
-            <h3 className="mt-6 font-bold text-blue-900">
-              Ahmed Khan
-            </h3>
+              {/* Review */}
+              <p className="mt-5 text-gray-600 leading-7">
+                {testimonial.text}
+              </p>
 
-            <p className="text-gray-500 text-sm">
-              Property Client
-            </p>
-          </div>
+              {/* Client */}
+              <div className="mt-8 pt-6 border-t border-gray-100">
+                <h3 className="font-bold text-lg text-[#0B1F3A]">
+                  {testimonial.name}
+                </h3>
 
-          <div className="bg-white p-8 rounded-2xl shadow-lg">
-            <div className="text-yellow-500 text-xl">★★★★★</div>
-
-            <p className="mt-4 text-gray-600">
-              Booking an appointment was simple, and the legal consultation
-              exceeded my expectations.
-            </p>
-
-            <h3 className="mt-6 font-bold text-blue-900">
-              Fatima Ali
-            </h3>
-
-            <p className="text-gray-500 text-sm">
-              Family Law Client
-            </p>
-          </div>
-
-          <div className="bg-white p-8 rounded-2xl shadow-lg">
-            <div className="text-yellow-500 text-xl">★★★★★</div>
-
-            <p className="mt-4 text-gray-600">
-              The AI Legal Assistant gave me useful legal information before
-              I contacted the firm.
-            </p>
-
-            <h3 className="mt-6 font-bold text-blue-900">
-              Bilal Ahmed
-            </h3>
-
-            <p className="text-gray-500 text-sm">
-              AI Assistant User
-            </p>
-          </div>
-
+                <p className="text-sm text-blue-700 font-medium mt-1">
+                  {testimonial.role}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
 
       </div>
