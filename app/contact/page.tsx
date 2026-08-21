@@ -13,7 +13,7 @@ export default function ContactPage() {
     <main className="bg-gray-50">
 
       {/* Hero Section */}
-      <section className="bg-[#0B1F3A] text-white py-20">
+     <section className="bg-gradient-to-r from-[#0B1F3A] via-[#123C69] to-[#1D4ED8] text-white py-24">
         <div className="max-w-7xl mx-auto px-6 text-center">
 
           <p className="text-blue-300 font-semibold uppercase tracking-widest text-sm">
